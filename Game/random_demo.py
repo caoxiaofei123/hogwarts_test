@@ -36,11 +36,11 @@ def fight(my_hp,enemy_hp,my_power,enemy_power) :
         # 若随机数=0则我方出击，否则对方出击，回合数+1
         if random.randint(0,1) == 0:
             enemy_hp = enemy_hp - my_power
-            print(f"当前回合：{roundNum},我方出击，攻击力是{my_power},剩余血量是{my_hp}")
+            print(f"当前回合：{roundNum},我方出击，我方攻击力是{my_power},敌方剩余血量是{my_hp}")
             roundNum = roundNum + 1
         else:
             my_hp = my_hp - enemy_power
-            print(f"当前回合：{roundNum},敌方出击，攻击力是{enemy_power},剩余血量是{enemy_hp}")
+            print(f"当前回合：{roundNum},敌方出击，敌方攻击力是{enemy_power},我方剩余血量是{enemy_hp}")
             roundNum = roundNum + 1
 
         # 判断谁的剩余血量<=0
