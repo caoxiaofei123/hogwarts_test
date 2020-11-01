@@ -57,23 +57,25 @@ class TongLao:
             self.hp -= enemy_power
 
         # 判断谁的剩余血量<=0
+        # if self.hp < enemy_hp:
+        #     # 打印我方、敌方的剩余血量
+        #     print(f"我方输了：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
+        # elif self.hp > enemy_hp :
+        #     # 打印我方、敌方的剩余血量
+        #     print(f"我方赢了：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
+        # else:
+        #     # 打印我方、敌方的剩余血量
+        #     print(f"平手：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
+
         if self.hp < enemy_hp:
             # 打印我方、敌方的剩余血量
-            print(f"我方输了：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
+            print('我方输了：我方剩余血量是%d、敌人的剩余血量是%d'%(self.hp, enemy_hp))
         elif self.hp > enemy_hp :
             # 打印我方、敌方的剩余血量
-            print(f"我方赢了：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
+            print('我方赢了：我方剩余血量是%d、敌人的剩余血量是%d'%(self.hp, enemy_hp))
         else:
             # 打印我方、敌方的剩余血量
-            print(f"平手：我方剩余血量是{self.hp},敌人的剩余血量是{enemy_hp}")
-
-if __name__ == "__main__":
-    # 实例化对象
-    tonglao = TongLao(1000,200)
-    # 调用通用方法
-    tonglao.seePeople("丁春秋")
-    tonglao.fightZms(999,199)
-
+            print('平手：我方剩余血量是%d、敌人的剩余血量是%d'%(self.hp, enemy_hp))
 
 
 

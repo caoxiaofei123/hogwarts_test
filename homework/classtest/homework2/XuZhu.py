@@ -15,27 +15,31 @@
 2.定义一个XuZhu类，继承于童姥。虚竹宅心仁厚不想打架。所以虚竹只有一个read（念经）的方法。每次调用都会打印“罪过罪过”
 加入模块化改造
 """
-from classtest.homework2.TongLao import TongLao
+#仅引入文件路径不能获取到指定的类
+# from homework.classtest.homework2 import TongLao
+
+from homework.classtest.homework2.TongLao import TongLao
 
 
 class XuZhu(TongLao):
 
     # 定义构造方法
-    def __init__(self,xzHp,xzPower):
+    def __init__(self,xzHp,xzPower,tlHp,tlPower):
         self.xzHp = xzHp
         self.xzPower = xzPower
-        super().__init__(200,400)
-    # 定义本身方法
+        # 调用父类的构造方法
+        super().__init__(tlHp,tlPower)
+    # 定义方法
     def read(self):
         print("罪过罪过")
 
 
-
 if __name__ == "__main__":
     # 实例化对象
-    xuzhu = XuZhu(200,500)
+    xuzhu = XuZhu(500,100,1000,500)
     # 调用父类方法
     xuzhu.seePeople("丁春秋")
+    # 调用父类方法，传入敌人的属性值
     xuzhu.fightZms(1000,100)
     # 调用本身方法
     xuzhu.read()
