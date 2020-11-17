@@ -54,8 +54,8 @@ print(yaml.dump({'name': "The Cloak 'Colluin'", 'depth': 5, 'rarity': 45,
 'weight': 10, 'cost': 50000, 'flags': ['INT', 'WIS', 'SPEED', 'STEALTH']}))
 
 # yaml文件转换成字典或者列表
-print(yaml.load(open("yaml.yml"),Loader=yaml.FullLoader))
+print(yaml.load(open("yaml.yml"), Loader=yaml.FullLoader))
 
 # 字段或者列表转换成yaml格式
-with open("yamlchange.yml","w") as f:
+with open("yamlchange.yml", "w") as f:
     yaml.dump(data = {'a':[1, 2]},stream = f)
