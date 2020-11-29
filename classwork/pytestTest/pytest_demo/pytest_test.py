@@ -1,7 +1,7 @@
 # -*- coding :UTF-8
 # @Time     :2020/11/1 16:18
 # @autor    :cxf
-# @File     :pytest.py
+# @File     :pytest_test.py
 """
 1.第三方库的安装
 pip install pytest

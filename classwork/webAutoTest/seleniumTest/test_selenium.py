@@ -8,11 +8,14 @@
 解压后，配置环境变量
 重启pycharm 以及cmd，执行命令chromedriver 如下则安装成功
 
+
+2.selenium IDE用例录制
+
+
 '''
 
 import selenium
 from selenium import webdriver
 
-def test_selenium():
-    driver = webdriver.Chrome()
-    driver.get("https://www.baidu.com/")
+driver = webdriver.Chrome()
+driver.get("https://www.baidu.com/")

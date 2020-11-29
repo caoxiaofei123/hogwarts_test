@@ -4,10 +4,10 @@ allur是一个轻量级的测试报告，可插入图片、视频等
 pip install allure-pytest
 
 2.运行脚本
-pytest allureReport.py --alluredir=./pytestTest/1
+pytest allureReport.py --alluredir=./allureTest/1
 
 3.生成报告
-allure serve ./pytestTest/1
+allure serve ./allureTest/1
 """
 
 import pytest
