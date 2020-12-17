@@ -10,19 +10,27 @@
 # 普通方法，而非测试用例
 import pytest
 
-class test_demo:
 
+# 部分用例需要调用其他方法时，使用fixture定义
+@pytest.fixture()
+def login():
+    print("login")
+    return "haha"
+
+
+class test_demo:
 
     def inc(x):
         return x + 1
 
-
     # test开头，可识别成测试用例
+    # parametrize 定义用例入参
     @pytest.mark.parametrize('a,b', [
         (1, 2),
         (2, 3)])
-    def test_answer(a,b):
+    def test_answer(a, b):
         print(a)
+        print(login)
         assert a == b
 
 
